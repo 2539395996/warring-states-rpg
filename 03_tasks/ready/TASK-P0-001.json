@@ -1,0 +1,24 @@
+{
+  "task_id": "TASK-P0-001",
+  "title": "只读审计旧项目与本地Godot环境",
+  "status": "READY",
+  "requirements": ["REQ-ENG-001", "REQ-WORKFLOW-001"],
+  "dependencies": [],
+  "source_docs": ["README.md", "00_context/01_PROJECT_LOCKS.md", "战国立志传_完整重构项目总控方案.md"],
+  "allowed_write_paths": ["04_reports/**"],
+  "forbidden_write_paths": ["E:/HWLZZUNITY/HWLZZ/**", "E:/洪武立志传/**"],
+  "work_items": [
+    "在已获访问权限下读取Godot、dotnet、Codex、Git实际版本和项目状态；未安装如实报告",
+    "根据用户已提供的旧工程路径进行只读模块枚举，若无法访问明确报告",
+    "分类纯C#可迁移/需适配引擎/需历史重写/版权不允许复用",
+    "不修改旧代码，不创建新游戏工程，不宣称执行了未运行的测试"
+  ],
+  "test_commands": [],
+  "acceptance": [
+    "报告列出每个实际审计过的文件路径与可复用级别",
+    "报告列出Godot和.NET真实版本及版本获取证据或不可用原因",
+    "明确说明无任何旧工程文件被修改"
+  ],
+  "evidence_paths": ["04_reports/TASK-P0-001-REPORT.md"],
+  "rollback": "删除本任务新增报告文件；保留旧工程不变"
+}
